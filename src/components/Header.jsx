@@ -53,13 +53,13 @@ export default function Header() {
 
     const linkList=links.map((link,index)=>{
         return(
-            <li key={index}><Button onClick={()=>{handelActive(index)}} className={`${ link.isAclive  ? 'dark:!bg-slate-800':'dark:!bg-slate-700'} ${link.isAclive ? '!bg-gray-400':'!bg-gray-200'}   !px-5  !h-10 hover:!bg-gray-400  hover:dark:!bg-slate-800 !text-black dark:!text-white`} variant="text">{link.linkName}</Button></li>
+            <li key={index}><a href={`/${link.linkName}`}><Button onClick={()=>{handelActive(index)}} className={`${ link.isAclive  ? 'dark:!bg-slate-800':'dark:!bg-slate-700'} ${link.isAclive ? '!bg-gray-400':'!bg-gray-200'}   !px-5  !h-10 hover:!bg-gray-400  hover:dark:!bg-slate-800 !text-black dark:!text-white`} variant="text">{link.linkName}</Button></a></li>
         )
     })
 
     const linkListMobile=links.map((link,index)=>{
         return(
-            <li className="" key={index}><Button onClick={()=>{handelActive(index)}} className={`${ link.isAclive  ? 'dark:!bg-slate-800':'dark:!bg-slate-700'} ${link.isAclive ? '!bg-gray-400':'!bg-gray-200'}   !px-5  !h-10 hover:!bg-gray-400  hover:dark:!bg-slate-800 !text-black dark:!text-white !w-full !justify-start sm:!justify-center`} variant="text">{link.linkName}</Button></li>
+            <li className="" key={index}><a href={`/${link.linkName}`}><Button onClick={()=>{handelActive(index)}} className={`${ link.isAclive  ? 'dark:!bg-slate-800':'dark:!bg-slate-700'} ${link.isAclive ? '!bg-gray-400':'!bg-gray-200'}   !px-5  !h-10 hover:!bg-gray-400  hover:dark:!bg-slate-800 !text-black dark:!text-white !w-full !justify-start sm:!justify-center`} variant="text">{link.linkName}</Button></a></li>
         )
     })
 
@@ -75,7 +75,7 @@ export default function Header() {
     };
   
     return(
-        <>
+        <header>
         {/* Dialog */}
       <Dialog
         fullScreen
@@ -109,6 +109,6 @@ export default function Header() {
        
      
      </div>
-     </>
+     </header>
     )
 }

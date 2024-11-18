@@ -4,13 +4,34 @@ import XIcon from '@mui/icons-material/X';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import myImg from '/css/react-project/PORTFOLIO/portfolio/public/img/pagina-web.png'
+import { ReactTyped } from "react-typed";
+import { useState } from 'react';
 
 export default function HeroSection() {
+    const [isSecondTypedVisible, setSecondTypedVisible] = useState(false);
+
+    const handleFirstTypingComplete = () => {
+      setSecondTypedVisible(true); // Affiche le deuxième ReactTyped après le premier
+    };
     return(
         <div className='flex justify-between items-center flex-wrap md:flex-nowrap py-28'>
-        <div className='flex flex-col gap-10'>
-        <Typography className='dark:text-white' variant="h3" gutterBottom>
-         I am Djelid Rh,<br/>Frontend Developer
+        <div className='flex flex-col gap-10 transition-all'>
+        <Typography className='dark:text-white !font-extrabold' variant="h3" gutterBottom>
+        {/* <ReactTyped strings={["I am <span className='!text-purple-900'>Djelid Rh</span>,<br/>Frontend Developer"]} typeSpeed={40} /> */}
+        <ReactTyped
+        className='text-purple-950 '
+        strings={['I am Djelid Rh,']}
+        typeSpeed={50}
+        onComplete={handleFirstTypingComplete} // Callback lorsque le premier est terminé
+      />
+      <br />
+      {isSecondTypedVisible && (
+        <ReactTyped
+          strings={['Frontend Developer.']}
+          typeSpeed={50}
+        />
+      )}
+
         </Typography>
 
         <Typography className='text-slate-800 dark:text-slate-400' variant="body1" gutterBottom>
@@ -25,8 +46,8 @@ export default function HeroSection() {
       </ul>
 
         </div>
-        <div className='flex justify-center items-center basis-2/3'>
-            <img className='w-64 h-64 animate-bounce' src={myImg} alt="" />
+        <div className='justify-center items-center basis-2/3 hidden md:flex'>
+            <img className='w-64 h-64 animate-bounce' src={myImg} alt="img" />
         </div>
         </div>
     )
