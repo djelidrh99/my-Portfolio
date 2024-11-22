@@ -205,7 +205,7 @@ export default function Main() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="py-28 flex">
+      <div id="Projects" className="py-28 flex">
         <Grid container spacing={2}>
           <Grid size={{ xs: 12, md: 2 }}>
             <div className="btn">
