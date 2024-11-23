@@ -25,8 +25,6 @@ This project is a personal portfolio built with modern technologies to showcase 
 
 
 
-✨ Preview
-C:\css\react-project\PORTFOLIO\portfolio\portfolio.png
 
 
 
@@ -39,5 +37,5 @@ For any questions or suggestions, reach out to me at djelidrh@gmail.com.
 ---
 
 Author: Djelid Rh
-Live Portfolio: djelidrh.netlify.app
+Live Portfolio: [djelidrh.netlify.app](https://djelidrh.netlify.app)
 
