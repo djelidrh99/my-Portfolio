@@ -63,7 +63,7 @@ export default function HeroSection() {
           </li>
         </ul>
       </div>
-      <div className="justify-center items-center basis-2/3 hidden md:flex">
+      <div className="justify-center items-center basis-2/3 hidden md:!flex">
         <Lottie className="!h-96" animationData={heroAnimation} />
       </div>
     </div>

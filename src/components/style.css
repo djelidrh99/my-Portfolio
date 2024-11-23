@@ -1,0 +1,4 @@
+.swiper-pagination-bullet-active {
+    @apply bg-purple-800
+    scale-125
+}

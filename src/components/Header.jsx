@@ -58,8 +58,8 @@ export default function Header() {
       >
         <li>
           <Button
-            className={`
-                 !px-5  !h-10 hover:!bg-gray-400  hover:dark:!bg-slate-800 !text-black dark:!text-white`}
+            className="
+                 !px-5  !h-10 hover:!bg-gray-400  hover:dark:!bg-slate-800 !text-black dark:!text-white"
             variant="text"
           >
             {link.linkName}
@@ -83,7 +83,7 @@ export default function Header() {
         <li className="">
           <Button
             onClick={handleClose}
-            className={`!px-5  !h-10 hover:!bg-gray-400  hover:dark:!bg-slate-800 !text-black dark:!text-white !w-full !justify-start sm:!justify-center`}
+            className="!px-5  !h-10 hover:!bg-gray-400  hover:dark:!bg-slate-800 !text-black dark:!text-white !w-full !justify-start sm:!justify-center"
             variant="text"
           >
             {link.linkName}
@@ -133,7 +133,7 @@ export default function Header() {
           >
             <MenuOutlinedIcon className=" text-black dark:text-white " />
           </Button>
-          <ul className="hidden md:flex justify-center w-fit shadow-2xl items-center overflow-hidden  rounded-full bg-gray-200 dark:bg-slate-700 dark:text-white">
+          <ul className="hidden md:!flex justify-center w-fit shadow-2xl items-center overflow-hidden  rounded-full bg-gray-200 dark:bg-slate-700 dark:text-white">
             {linkList}
           </ul>
           <Button

@@ -7,23 +7,32 @@ import reduxImg from "../../public/img/Skills-Img/redux.png";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import {Autoplay,Pagination} from 'swiper/modules'
 
 // Import Swiper styles
 import "swiper/css";
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+import './style.css'
 
 export default function Skills() {
   return (
     <div id="Skills">
       <Swiper
+        modules={[Autoplay,Pagination]}
         spaceBetween={50}
         slidesPerView={2}
+        loop={true}
+        autoplay={{delay:3000,
+          disableOnInteraction:false
+        }}
+        pagination={{clickable:true}}
+
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
         className="bg-gray-200 dark:bg-slate-700 !my-5 !rounded-md !py-10"
       >
-        <div className="text-black dark:text-white z-50 text-center text-3xl font-bold  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          Swipe
-        </div>
+        
 
         <SwiperSlide className="!flex !justify-center !items-center">
           <img className="hover:scale-105 transition" src={html5} alt="img" />
